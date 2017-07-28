@@ -1,7 +1,7 @@
 # frontend-nanodegree-resume
 ### What is this?
 
-This a project for Udacity Front-end Nanodegree. It is a simple resume (obviously I made up some of the working experiences).
+This a project for Udacity Front-end Nanodegree. It is a simple resume (obviously I made up some of the working experiences). You can try this live demo [Hongyu's Resume](https://iamzhaihy.github.io/udacity-fend-resume/)
 
 
 
