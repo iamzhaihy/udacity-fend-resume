@@ -1,34 +1,34 @@
 var bio = {
-
-    name : "Hongyu Zhai",
-	role : "Web Developer",
-	contacts : {
-		email  : "harvey.zhai@gmail.com",
-		mobile : "530-760-XXXX",
-		github : "iamzhaihy",
-        facebook : "Hongyu Zhai",
-		location : "Davis, California"
-	},
-	biopic : "images/fry.jpg",
-	skills : [
+    
+    name: "Hongyu Zhai",
+    role: "Web Developer",
+    contacts: {
+        email: "harvey.zhai@gmail.com",
+        mobile: "530-760-XXXX",
+        github: "iamzhaihy",
+        facebook: "Hongyu Zhai",
+        location: "Davis, California"
+    },
+    biopic: "images/fry.jpg",
+    skills: [
         "C++ Development",
         "Learning new things",
         "Speaking three languages",
         "Pretending to be a superhero"
     ],
-	welcomeMessage : "Resume under construction",
+    welcomeMessage: "Resume under construction",
 
-    display : function() {
+    display: function () {
         // my name and role (displaed in the header)
         var formattedName = HTMLheaderName.replace("%data%", this.name);
         var formattedRole = HTMLheaderRole.replace("%data%", this.role);
-        var formattedBioPic  = HTMLbioPic.replace("%data%", this.biopic);
+        var formattedBioPic = HTMLbioPic.replace("%data%", this.biopic);
         var formattedMessage = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
         $("#header").prepend(formattedRole, formattedName);
         $("#header").append(formattedBioPic, formattedMessage);
 
         // contact information (displaed in the topContacts)
-        var formattedEmail  = HTMLemail.replace("%data%", this.contacts.email);
+        var formattedEmail = HTMLemail.replace("%data%", this.contacts.email);
         var formattedMobile = HTMLmobile.replace("%data%", this.contacts.mobile);
         var formattedGithub = HTMLgithub.replace("%data%", this.contacts.github);
         var formattedLocation = HTMLlocation.replace("%data%", this.contacts.location);
@@ -46,44 +46,42 @@ var bio = {
 
 var education = {
 
-    schools : [
-        {
-            name : "Jinan Foreign Language School",
-            location : "Jinan, Shandong, China",
-            degree : "High School Diploma",
-            majors : ["Art & Humanities"],
-            dates  : "2012-09-01"
+    schools: [{
+            name: "Jinan Foreign Language School",
+            location: "Jinan, Shandong, China",
+            degree: "High School Diploma",
+            majors: ["Art & Humanities"],
+            dates: "2012-09-01"
         },
         {
-            name : "University of California, Davis",
-            location : "Davis, California, United States",
-            degree : "BS",
-            majors : ["Computer Science"],
-            dates  : "2015-09-16"
+            name: "University of California, Davis",
+            location: "Davis, California, United States",
+            degree: "BS",
+            majors: ["Computer Science"],
+            dates: "2015-09-16"
         }
     ],
-    onlineCourses : [
-        {
-            title  : "Learning How to Learn",
-            school : "University of California, San Diego",
-            dates  : "2017-05-01",
-            url    : "https://www.coursera.org/learn/learning-how-to-learn"
+    onlineCourses: [{
+            title: "Learning How to Learn",
+            school: "University of California, San Diego",
+            dates: "2017-05-01",
+            url: "https://www.coursera.org/learn/learning-how-to-learn"
         },
         {
-            title  : "Data Science",
-            school : "John Hopkins University",
-            dates  : "2017-05-01",
-            url    : "https://www.coursera.org/specializations/jhu-data-science"
+            title: "Data Science",
+            school: "John Hopkins University",
+            dates: "2017-05-01",
+            url: "https://www.coursera.org/specializations/jhu-data-science"
         },
         {
-            title  : "Front-end Development Nanodegree",
-            school : "Udacity",
-            dates  : "2016-07-03",
-            url    : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+            title: "Front-end Development Nanodegree",
+            school: "Udacity",
+            dates: "2016-07-03",
+            url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         }
     ],
 
-    display : function() {
+    display: function () {
         if (this.schools.length > 0) {
             $("#education").append(HTMLschoolStart);
             var schoolName, schoolDegree, nameDegree;
@@ -124,31 +122,30 @@ var education = {
 
 var work = {
 
-    jobs : [
-        {
-            employer : "UC Davis EALC",
-            title    : "Chinese Tutor",
-            location : "Davis, California",
-            dates    : "in progress",
-            description : "I help teacher to teach in class, interacting with the students. For me, the happiest thing is helping others."
+    jobs: [{
+            employer: "UC Davis EALC",
+            title: "Chinese Tutor",
+            location: "Davis, California",
+            dates: "in progress",
+            description: "I help teacher to teach in class, interacting with the students. For me, the happiest thing is helping others."
         },
         {
-            employer : "Daily Bugle",
-            title    : "Reporter",
-            location : "New York City",
-            dates    : "2000 - 2010",
-            description : "I was a reporter looking for interesting news and eye-catching headlines. Working with Peter was really fun."
+            employer: "Daily Bugle",
+            title: "Reporter",
+            location: "New York City",
+            dates: "2000 - 2010",
+            description: "I was a reporter looking for interesting news and eye-catching headlines. Working with Peter was really fun."
         },
         {
-            employer : "Daily Planet",
-            title    : "Reporter",
-            location : "Metropolis",
-            dates    : "2012 - 2014",
-            description : "It was a fun experimence as well. My partner Clark was a relly nice guy, tall and strong. The only weird thing was that he went to telephone booth frequently for some reasons."
+            employer: "Daily Planet",
+            title: "Reporter",
+            location: "Metropolis",
+            dates: "2012 - 2014",
+            description: "It was a fun experimence as well. My partner Clark was a relly nice guy, tall and strong. The only weird thing was that he went to telephone booth frequently for some reasons."
         }
     ],
 
-    display : function() {
+    display: function () {
         if (this.jobs.length > 0) {
             $("#workExperience").append(HTMLworkStart);
             var workEmployer, workTitle;
@@ -172,16 +169,14 @@ var work = {
 };
 
 var projects = {
-    projects : [
-        {
-            title  : "Web Shooter for a Vigilante",
-            dates  : "2003",
-            description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur elit odio, a convallis turpis pharetra in. Quisque pretium felis et mollis elementum. Quisque a libero et erat vehicula vestibulum eu a magna. Integer placerat velit ipsum, quis congue ipsum laoreet eget. Curabitur quis nisi leo. Mauris nisl nunc, dignissim fringilla facilisis eu, pellentesque vitae ante. Phasellus rutrum ultrices efficitur. Curabitur in luctus urna. Proin eget est tortor. Quisque id lectus sem.",
-            images : ["images/webshooter.jpg"]
-        }
-    ],
+    projects: [{
+        title: "Web Shooter for a Vigilante",
+        dates: "2003",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur elit odio, a convallis turpis pharetra in. Quisque pretium felis et mollis elementum. Quisque a libero et erat vehicula vestibulum eu a magna. Integer placerat velit ipsum, quis congue ipsum laoreet eget. Curabitur quis nisi leo. Mauris nisl nunc, dignissim fringilla facilisis eu, pellentesque vitae ante. Phasellus rutrum ultrices efficitur. Curabitur in luctus urna. Proin eget est tortor. Quisque id lectus sem.",
+        images: ["images/webshooter.jpg"]
+    }],
 
-    display : function() {
+    display: function () {
         if (this.projects.length > 0) {
             $("#projects").append(HTMLprojectStart);
             var projectTitle, projectDates;
@@ -193,7 +188,7 @@ var projects = {
                 projectDates = HTMLprojectDates.replace("%data%", this.projects[i].dates);
                 $(".project-entry:last").append(projectDates);
 
-                for (var j = 0; j < projects.projects[i].images.length; j++){
+                for (var j = 0; j < projects.projects[i].images.length; j++) {
                     projectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
                     $(".project-entry:last").append(projectImage);
                 }
